@@ -1,0 +1,65 @@
+.welcome {
+  height: 127px;
+
+  & .swiper-button-next {
+
+  }
+}
+
+.welcome__swiper {
+  height: 100%;
+}
+
+.welcome__slide {
+  width: 100%;
+  height: 100%;
+}
+
+.welcome__slide-img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.welcome__slide-box {
+  padding-left: 13px;
+  padding-top: 20px;
+  width: 200px;
+  position: relative;
+  z-index: 10;
+}
+
+.welcome__slide-btn {
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 4px 9px;
+  color: #fff;
+  background: transparent;
+  font-size: 9px;
+}
+
+.welcome__number {
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.welcome__doors {
+  color: #fff;
+  font-size: 9px;
+}
+
+.welcome__name {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+  
+.welcome__subname {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}

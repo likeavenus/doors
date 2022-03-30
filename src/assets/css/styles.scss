@@ -9,6 +9,7 @@ html {
 
 body {
     position: relative;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -59,4 +60,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     border-radius: 20px;
+}
+
+.container {
+    padding: 0 15px;
 }
