@@ -1,0 +1,92 @@
+@import "variables.scss";
+
+.footer {
+   background-color: #EEEEEE;
+   padding-top: 34px;
+   padding-bottom: 40px;
+   display: flex;
+   justify-content: center;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   @media (min-width: $tablet) { 
+      flex-direction: column;
+      align-items: stretch;
+		padding-top: 44px;
+      padding-bottom: 3px;
+	}
+   &__wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      @media (min-width: $tablet) { 
+         grid-template-columns: 1fr 1fr;
+   }
+   }
+
+   &__wrap-right {
+
+   }
+
+
+   &__wrap-left {
+      @media (min-width: $tablet) { 
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end
+   }
+   }
+
+   &__copyright {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 22px;
+      p {
+         font-size: 18px;
+         line-height: 21px;
+         color: #DC0000;
+      }
+      a {
+         font-size: 16px;
+         line-height: 19px;
+         text-transform: uppercase;
+         color: #1E1C1C;
+      }
+      a:visited {
+         color: #1E1C1C;
+      }
+      @media (min-width: $tablet) { 
+         margin-bottom: 20px;
+         a {
+            font-size: 18px;
+            line-height: 21px;
+         }
+   }
+   }
+
+   &__pay {
+      margin-bottom: 49px;
+      @media (min-width: $tablet) { 
+         margin-bottom: 0;
+   }
+      
+   }
+
+   &__number {
+      margin-bottom: 25px;
+      a{
+         font-size: 24px;
+         line-height: 28px;
+         text-transform: uppercase;
+         color: #DC0000;
+      }
+      a:visited {
+         color: #DC0000;
+      }
+   }
+
+   &__socical {
+      display: flex;
+      gap: 25px;
+   }
+}
