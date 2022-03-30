@@ -1,8 +1,63 @@
+@import 'variables.scss';
+
 .welcome {
   height: 127px;
+  position: relative;
+  color: #fff;
+  margin-bottom: 10px;
 
   & .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/arrow-right.svg');
+    background-size: contain;
+    right: -15px;
+    &:after {
+      content: '';
+    }
+  }
 
+  & .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/arrow-left.svg');
+    background-size: contain;
+    left: -15px;
+    &:after {
+      content: '';
+    }
+  }
+
+  @media (min-width: $tablet) {
+    height: 306px;
+    margin-bottom: 18px;
+    & .swiper-button-next {
+      width: 64px;
+      height: 64px;
+      right: -33px;
+    }
+    & .swiper-button-prev {
+      width: 64px;
+      height: 64px;
+      left: -33px;
+    }
+  }
+
+  @media (min-width: $tabletM) {
+    height: 418px;
+  }
+
+  @media (min-width: $laptop) {
+    height: 532px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop1) {
+    height: 597px;
+  }
+
+  @media (min-width: $desktop2) {
+    height: 750px;
   }
 }
 
@@ -30,36 +85,146 @@
   width: 200px;
   position: relative;
   z-index: 10;
+
+  @media (min-width: $tablet) {
+    padding-top: 68px;
+    padding-left: 61px;
+    width: 300px;
+  }
+
+  @media (min-width: $tabletM) {
+    padding-top: 142px;
+    padding-left: 56px;
+  }
+
+  @media (min-width: $laptop) {
+    padding-top: 235px;
+    padding-left: 118px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop2) {
+    padding-top: 309px;
+    padding-left: 153px;
+  }
 }
 
+.welcome__number {
+  font-weight: 800;
+  font-size: 12px;
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  @media (min-width: $tabletM) {
+    font-size: 25px;
+  }
+
+  @media (min-width: $desktop1) {
+    font-size: 35px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 40px;
+  }
+}
+
+.welcome__doors {
+  font-size: 9px;
+  @media (min-width: $tablet) {
+    font-size: 17px;
+    margin-bottom: 2px;
+  }
+  @media (min-width: $tabletM) {
+    font-size: 20px;
+  }
+  @media (min-width: $desktop1) {
+    font-size: 25px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 30px;
+  }
+}
+
+.welcome__name {
+  font-weight: 800;
+  text-transform: uppercase;
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+  @media (min-width: $tabletM) {
+    font-size: 40px;
+  }
+  @media (min-width: $desktop1) {
+    font-size: 50px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 60px;
+  }
+}
+
+.welcome__subname {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 3px;
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
+  @media (min-width: $tabletM) {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.welcome__price {
+  font-size: 14px;
+  margin-bottom: 9px;
+
+  & span {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tabletM) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $desktop1) {
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 40px;
+  }
+}
+  
 .welcome__slide-btn {
   text-transform: uppercase;
   border: 1px solid #fff;
   padding: 4px 9px;
-  color: #fff;
   background: transparent;
   font-size: 9px;
-}
+  color: #fff;
 
-.welcome__number {
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-}
+  @media (min-width: $tablet) {
+    font-size: 12px;
+  }
 
-.welcome__doors {
-  color: #fff;
-  font-size: 9px;
-}
-
-.welcome__name {
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-  
-.welcome__subname {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 9px;
+  @media (min-width: $tabletM) {
+    font-size: 18px;
+    padding: 8px 32px;
+  }
+  @media (min-width: $desktop2) {
+    font-size: 24px;
+  }
 }

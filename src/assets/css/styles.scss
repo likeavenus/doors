@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "welcome.scss";
+@import "consultant.scss";
 @import "footer.scss";
 @import "nullstyle.scss";
 
@@ -64,4 +65,18 @@ body::-webkit-scrollbar-thumb {
 
 .container {
     padding: 0 15px;
+
+    @media (min-width: $tablet) {
+        padding: 0 34px;
+    }
+
+    @media (min-width: $tabletM) {
+        padding: 0 35px;
+    }
+    @media (min-width: $laptop) {
+        padding: 0 36px;
+    }
+    @media (min-width: $desktop2) {
+        padding: 0 100px;
+    }
 }
