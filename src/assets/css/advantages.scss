@@ -1,0 +1,109 @@
+.advantages {
+   border: 1px solid #EEEEEE;
+   font-family: 'Montserrat';
+   padding-top: 16px;
+   padding-left: 25px;
+   padding-right: 30px;
+   padding-bottom: 25px;
+   margin-bottom: 56px;
+   @media (min-width: $tablet) { 
+      padding-top: 28px;
+      padding-bottom: 28px;
+      padding-left: 36px;
+      padding-right: 29px;
+	}
+   @media (min-width: $tabletM) { 
+      padding-bottom: 40px;
+      padding-right: 122px;
+	}
+   @media (min-width: $laptop) { 
+      padding-bottom: 92px;
+      padding-right: 33px;
+	}
+   @media (min-width: $desktop1) { 
+      padding-bottom: 82px;
+      padding-right: 42px;
+	}
+   &__title {
+      h3 {
+         font-style: normal;
+         font-weight: 700;
+         font-size: 16px;
+         line-height: 19px;
+         text-transform: uppercase;
+         color: #1E1C1C;
+      }
+      margin-bottom: 26px;
+      @media (min-width: $tablet) { 
+         margin-bottom: 15px;
+         h3{
+            font-size: 24px;
+            line-height: 28px;
+         }
+      }
+   }
+
+   &__items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 21px;
+      @media (min-width: $tablet) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: repeat(3, 1fr);
+         column-gap: 21px;
+         row-gap: 57px;
+      }
+      @media (min-width: $tablet) { 
+         column-gap: 184px;
+         row-gap: 57px;
+      }
+      @media (min-width: $laptop) { 
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(2, 1fr);
+         column-gap: 109px;
+         row-gap: 65px;
+      }
+      @media (min-width: $desktop1) { 
+         column-gap: 188px;
+      }
+      @media (min-width: $desktop2) { 
+         column-gap: 365px;
+      }
+   }
+   
+
+	&__item-wrapp {
+      display: flex;
+      gap: 27px;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      @media (min-width: $tablet) {
+         gap: 7px;
+      }
+   }
+
+   &__item-img {
+      align-self: center;
+   }
+
+   &__item-title {
+      align-self: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      color: #DC0000;
+   }
+
+   &__item-text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      color: #1E1C1C;
+
+   }
+}
