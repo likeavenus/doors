@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .advantages {
    border: 1px solid #EEEEEE;
    font-family: 'Montserrat';
@@ -11,18 +13,25 @@
       padding-bottom: 28px;
       padding-left: 36px;
       padding-right: 29px;
+      margin-bottom: 41px;
 	}
    @media (min-width: $tabletM) { 
       padding-bottom: 40px;
       padding-right: 122px;
+      margin-bottom: 24px;
 	}
    @media (min-width: $laptop) { 
       padding-bottom: 92px;
       padding-right: 33px;
+      margin-bottom: 40px;
 	}
    @media (min-width: $desktop1) { 
       padding-bottom: 82px;
       padding-right: 42px;
+      margin-bottom: 55px;
+	}
+   @media (min-width: $desktop2) { 
+      margin-bottom: 50px;
 	}
    &__title {
       h3 {
