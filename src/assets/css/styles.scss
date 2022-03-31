@@ -6,6 +6,7 @@
 @import "nullstyle.scss";
 @import "advantages.scss";
 @import "feedback.scss";
+@import "viewed.scss";
 
 html {
     touch-action: manipulation;
@@ -49,8 +50,8 @@ p {
     margin: 0;
 }
 
-.main {
-   
+main {
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
