@@ -1,14 +1,11 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation, Pagination]);
-
-export default function Welcome() {
+export default function Welcome(Swiper, Navigation, Pagination) {
+    Swiper.use([Navigation, Pagination]);
     const swiper = new Swiper('.welcome__swiper', {
         direction: 'horizontal',
         loop: false,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.welcome__next',
+            prevEl: '.welcome__prev',
         },
     });
 }
