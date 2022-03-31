@@ -6,6 +6,8 @@
 @import "advantages.scss";
 @import "feedback.scss";
 @import "viewed.scss";
+@import "buynow.scss";
+@import "brands.scss";
 
 html {
     touch-action: manipulation;
@@ -14,6 +16,7 @@ html {
 body {
     position: relative;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 h1 {
