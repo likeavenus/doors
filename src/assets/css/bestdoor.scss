@@ -1,0 +1,35 @@
+@import "variables";
+
+.best-door {
+    border: 1px solid #EEEEEE;
+    color: #1E1C1C;
+    padding: 17px 13px;
+    text-transform: uppercase;
+}
+
+.best-door__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-door__title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-door__best-of-day {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.best-door__name {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.best-door__model {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+}
