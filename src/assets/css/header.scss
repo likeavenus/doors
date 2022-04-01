@@ -7,7 +7,7 @@ header {
     }
 
     @media (min-width: $tabletM) {
-        padding: 17px 26px 16px;
+        padding: 17px 26px 18px;
         margin-bottom: 18px;
     }
     @media (min-width: $laptop) {
@@ -213,11 +213,23 @@ header {
     position: relative;
 
     @media (min-width: $tablet) {
-        width: 378px;
+        width: 448px;
     }
 
     @media (min-width: $tabletM) {
         width: 504px;
+    }
+
+    @media (min-width: $laptop) {
+        width: 538px;
+    }
+
+    @media (min-width: $desktop1) {
+        width: 680px;
+    }
+
+    @media (min-width: $desktop2) {
+        width: 861px;
     }
 }
 
@@ -274,6 +286,10 @@ header {
             height: 4px;
         }
     }
+
+    @media (min-width: $tabletM) {
+        display: none;
+    }
 }
 
 .header__anchors {
@@ -306,3 +322,17 @@ header {
     }
 }
 
+.burger-actions {
+    width: 33px;
+    height: 34px;
+    background-image: url('../img/icons/subburger.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    @media(min-width: $tabletM) {
+        display: block;
+    }
+    @media(min-width: $laptop) {
+        display: none;
+    }
+}
