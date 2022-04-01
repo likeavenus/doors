@@ -1,5 +1,7 @@
-export default function BuyNow(Swiper, Navigation, Pagination) {
-    Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
+
+export default function BuyNow() {
     const swiper = new Swiper(".buy-now__swiper", {
         slidesPreView:1,
         spaceBetween: 1000,

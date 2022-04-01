@@ -1,5 +1,7 @@
-export default function Feedback(Swiper, Navigation, Pagination) {
-   Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
+
+export default function Feedback() {
    const swiper = new Swiper(".feedback__swiper", {
       direction: "horizontal",
       loop: true,

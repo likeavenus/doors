@@ -1,5 +1,7 @@
-export default function Wiewed(Swiper, Navigation, Pagination) {
-    Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
+
+export default function Wiewed() {
     const swiper = new Swiper('.viewed__swiper', {
         slidesPreView:1,
         spaceBetween: 1000,
