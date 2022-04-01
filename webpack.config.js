@@ -11,19 +11,31 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const optimization = () => {
-    const config = {
+    return {
+        minimize: isProd,
         splitChunks: {
-            chunks: "all"
-        }
+            chunks: 'async',
+            minSize: 20000,
+            minRemainingSize: 0,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            enforceSizeThreshold: 50000,
+            cacheGroups: {
+              defaultVendors: {
+                test: /[\\/]node_modules[\\/]/,
+                priority: -10,
+                reuseExistingChunk: true,
+              },
+              default: {
+                minChunks: 2,
+                priority: -20,
+                reuseExistingChunk: true,
+              },
+            },
+          },
     };
-    if (isProd) {
-        config.minimizer = [
-            new OptimizeCssPlugin(),
-            new TerserPlugin()
-        ]
-    }
-    return config;
-};
+}
 
 module.exports = {
     context: path.resolve(__dirname, ''),
@@ -31,18 +43,17 @@ module.exports = {
     entry: ['@babel/polyfill', './src/index.js'],
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
     optimization: optimization(),
     devServer: {
-        contentBase: path.join(__dirname, 'src'),
-        watchContentBase: true,
+        static: './src',
+        hot: true,
         port: 9000,
-        hot: isDev
+        historyApiFallback: true,
     },
-    devtool: isDev ? 'source-map' : '',
+    devtool: isDev ? 'eval' : false,
     plugins: [
-        // new ESLintPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             minify: {
@@ -51,10 +62,6 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-                to: path.resolve(__dirname, 'dist')
-            },
             {
                 from: path.resolve(__dirname, 'src/assets/img/'),
                 to: path.resolve(__dirname, 'dist/assets/img')
@@ -69,24 +76,26 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: {
+                use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [
-                            '@babel/preset-env',
-                            // '@babel/preset-react' Раскомментировать и установить зависимость, если хотите использовать React
-                        ]
+                      presets: ['@babel/preset-env']
                     }
-                }
+                  },
+                // loader: {
+                //     loader: 'babel-loader',
+                //     options: {
+                //         presets: [
+                //             '@babel/preset-env',
+                //             // '@babel/preset-react' Раскомментировать и установить зависимость, если хотите использовать React
+                //         ]
+                //     }
+                // }
             },
             {
                 test: /\.(s[ac]ss)$/,
                 use: [{
                     loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        hmr: isDev,
-                        reloadAll: true
-                    }
                 }, 'css-loader', 'sass-loader']
             },
             {
