@@ -1,0 +1,22 @@
+.brands {
+   margin-bottom: 35px;
+   &__wrap {}
+
+   &__titel {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: capitalize;
+      color: #1E1C1C;
+      margin-bottom: 18px;
+   }
+
+   &__swiper {
+      border: 1px solid #EEEEEE;
+   }
+
+   &__item {}
+}
+
