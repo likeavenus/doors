@@ -1,0 +1,123 @@
+.news {
+   margin-bottom: 50px;
+   @media (min-width: $tablet) {
+      margin-bottom: 27px;
+   }
+   @media (min-width: $tabletM) {
+      margin-bottom: 100px;
+   }
+   @media (min-width: $laptop) {
+      margin-bottom: 40px;
+   }
+   @media (min-width: $desktop1) {
+      margin-bottom: 38px;
+   }
+   @media (min-width: $desktop2) {
+      margin-bottom: 50px;
+   }
+   &__wrap {}
+
+   &__title {
+      margin-bottom: 34px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #1E1C1C;
+      @media (min-width: $tablet) {
+         font-size: 30px;
+         line-height: 37px;
+      }
+      @media (min-width: $tabletM) {
+         margin-bottom: 34px;
+      }
+
+   }
+
+   &__items {
+      border: 1px solid #EEEEEE;
+      padding-top: 22px;
+      padding-left: 28px;
+      padding-bottom: 29px;
+      padding-right: 28px;
+      @media (min-width: $tablet) {
+         padding-top: 37px;
+         padding-left: 171px;
+         padding-right: 183px;
+         padding-bottom: 45px;
+      }
+      @media (min-width: $tabletM) {
+         padding-top: 37px;
+         padding-left: 92px;
+         padding-right: 88px;
+         padding-bottom: 45px;
+         display: flex;
+         justify-content: space-between;
+      }
+      @media (min-width: $laptop) {
+         padding-left: 39px;
+         padding-right: 41px;
+      }
+      @media (min-width: $desktop1) {
+         padding-left: 38px;
+         padding-right: 33px;
+      }
+      @media (min-width: $desktop2) {
+         padding-left: 33px;
+         padding-right: 75px;
+         padding-bottom: 99px;
+         padding-top: 74px;
+      }
+   }
+
+   &__item {
+      display: none;
+      &:nth-child(1) {
+         display: block;
+      }
+      @media (min-width: $tabletM) {
+         &:nth-child(2) { 
+            display: block;
+         }
+      }
+      @media (min-width: $laptop) {
+         &:nth-child(3) {
+            display: block;
+         }
+      }
+      @media (min-width: $desktop2) {
+         &:nth-child(4) {
+            display: block;
+         }
+      }
+   }
+
+   &__item-title {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 14px;
+      line-height: 99.7%;
+      text-transform: uppercase;
+      color: #1E1C1C;
+      @media (min-width: $tablet) { 
+         font-size: 21px;
+      }
+   }
+
+   &__item-img {
+      display: flex;
+      justify-content: center;
+      gap: 9px;
+      img {
+         width: 111.06px;
+         height: 241.87px;
+      }
+      @media (min-width: $tablet) {
+         gap: 14px;
+         img {
+            width: 164.2px;
+            height: 357.6px;
+         }
+      }
+   }
+}
