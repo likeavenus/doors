@@ -1,13 +1,30 @@
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
-
-Swiper.use([Navigation, Pagination, Autoplay]);
-
-export default function Brands() {
+export default function Brands(Swiper, Navigation, Pagination, Autoplay) {
+  Swiper.use([Navigation, Pagination, Autoplay]);
   const swiper = new Swiper(".brands__swiper", {
-    speed: 10000,
+    slidesPerView: 'auto',
     loop: true,
+    speed: 6000,
+    slidesPerView: '1',
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+          slidesPerView: 4,
+      },
+      1280: {
+          slidesPerView: 4,
+      },
+      1440: {
+          slidesPerView: 4,
+      },
+      1920: {
+          slidesPerView: 5,
+      }
+    },
     autoplay: {
-      delay: 0,
+    enabled: true,
+    delay: 1,
     },
   });
 }

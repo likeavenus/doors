@@ -1,6 +1,3 @@
-
-
-
 export default function DoorsView(Swiper, Navigation, Pagination) {
     Swiper.use([Navigation, Pagination]);
 
