@@ -1,12 +1,9 @@
-@import "variables.scss";
-
 .footer {
    background-color: #EEEEEE;
    padding-top: 34px;
    padding-bottom: 40px;
    display: flex;
    justify-content: center;
-   font-family: 'Montserrat';
    font-style: normal;
    font-weight: 400;
    @media (min-width: $tablet) { 

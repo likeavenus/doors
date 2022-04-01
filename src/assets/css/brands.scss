@@ -1,6 +1,24 @@
+
 .brands {
    margin-bottom: 35px;
-   &__wrap {}
+   @media (min-width: $tablet) {  
+      margin-bottom: 27px;
+   }
+   @media (min-width: $tabletM) {  
+      margin-bottom: 48px;
+   }
+   @media (min-width: $laptop) {  
+      margin-bottom: 40px;
+   }
+   @media (min-width: $desktop1) {  
+      margin-bottom: 38px;
+   }
+   @media (min-width: $desktop2) {  
+      margin-bottom: 50px;
+   }
+   &__wrap {
+      
+   }
 
    &__titel {
       font-family: 'Montserrat';
@@ -11,12 +29,29 @@
       text-transform: capitalize;
       color: #1E1C1C;
       margin-bottom: 18px;
+      @media (min-width: $tablet) {  
+         margin-bottom: 15px;
+         font-size: 36px;
+         line-height: 44px;
+      }
    }
 
    &__swiper {
       border: 1px solid #EEEEEE;
    }
 
-   &__item {}
+   &__swiper-wrapper {
+      transition-timing-function: linear;
+   }
+
+   &__swiper-item {
+      width: auto;
+   }
 }
 
+.brands {
+
+   &__swiper {
+      overflow: hidden;
+   }
+}

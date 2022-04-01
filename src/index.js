@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import Welcome from './components/welcome';
 import Feedback from './components/feedback';
@@ -11,6 +11,6 @@ import './assets/css/styles.scss';
 Welcome(Swiper, Navigation, Pagination);
 Feedback(Swiper, Navigation, Pagination);
 DoorsView(Swiper, Navigation, Pagination);
-Wiewed();
-BuyNow();
-Brands();
+Wiewed(Swiper, Navigation, Pagination);
+BuyNow(Swiper, Navigation, Pagination);
+Brands(Swiper, Navigation, Pagination, Autoplay);
