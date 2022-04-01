@@ -3,13 +3,23 @@
     color: #1E1C1C;
     text-transform: uppercase;
     padding-bottom: 11px;
-
+    margin-bottom: 37px;
     @media (min-width: $tablet) {
         padding-bottom: 0;
+        margin-bottom: 18px;
     }
 
     @media (min-width: $tabletM) {
         min-height: 681px;
+    }
+    @media (min-width: $laptop) {
+        margin-bottom: 18px;
+    }
+    @media (min-width: $desktop1) {
+        margin-bottom: 42px;
+    }
+    @media (min-width: $desktop1) {
+        margin-bottom: 50px;
     }
 }
 
