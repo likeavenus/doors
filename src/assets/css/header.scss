@@ -7,14 +7,14 @@ header {
     }
 
     @media (min-width: $tabletM) {
-        padding: 17px 26px 18px;
+        padding: 17px 26px 0px;
         margin-bottom: 18px;
     }
     @media (min-width: $laptop) {
         padding-right: 34px;
         padding-left: 29px;
         margin-bottom: 18px;
-        padding-bottom: 18px;
+
     }
     @media (min-width: $desktop1){
         padding-left: 34px;
@@ -24,7 +24,6 @@ header {
         padding-left: 100px;
         padding-right: 100px;
         padding-top: 17px;
-        padding-bottom: 14px;
     }
 }
 
@@ -298,27 +297,32 @@ header {
     a:nth-child(5){
         color: #DC0000;
     }
+    a:nth-child(5):hover{
+        background-color: #DC0000;
+        color: #FFFFFF;
+    }
     @media (min-width: $tabletM) {
         font-size: 19px;
         text-transform: uppercase;
         display: flex;
         align-self: center;
-        column-gap: 25px;
-        margin: 34px 0 auto;
+        margin: 18px 0 auto;
     } 
     @media (min-width: $laptop) { 
-        column-gap: 54px;
     }
 }
 
 .header__anchor {transition: color .2s ease;
+    padding: 16px 12.5px;
     &:visited {
     color: #000000;
     }
     &:hover {
-        color: #DC0000;
+        background-color: #F0F0F0;
+
     }
-    @media (min-width: $tabletM) {
+    @media (min-width: $laptop) {
+        padding: 16px 27px;
     }
 }
 
