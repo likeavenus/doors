@@ -25,8 +25,7 @@ closeMenu = document.querySelector('.modal__cross'),
 menu = document.querySelector('.header__modal');
 
 buttonBurger.addEventListener('click', ()=> {
-   menu.classList.add('active1');
-   buttonBurger.classList.add('unactive');
+   menu.classList.toggle('active1');
    document.addEventListener("click", e => {
       let target = e.target;
       let buttonBurger = target == menu || menu.contains(target);
