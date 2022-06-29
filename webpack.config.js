@@ -40,11 +40,20 @@ const optimization = () => {
 module.exports = {
     context: path.resolve(__dirname, ''),
     mode: 'development',
-    entry: ['@babel/polyfill', './src/index.js'],
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, 'dist'),
+    // entry: ['@babel/polyfill', './src/index.js'],
+    entry: {
+        index: './src/index.js',
+        catalog: './src/catalog.js'
     },
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        chunkFilename: '[id].[chunkhash].js',
+    },
+    // output: {
+    //     filename: "bundle.js",
+    //     path: path.resolve(__dirname, 'dist'),
+    // },
     optimization: optimization(),
     devServer: {
         static: './src',
@@ -56,9 +65,18 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+            chunks: ['index'],
             minify: {
                 collapseWhitespace: isProd
-            }
+            },
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog.html',
+            template: "./src/catalog.html",
+            chunks: ['catalog'],
+            minify: {
+                collapseWhitespace: isProd
+            },
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
